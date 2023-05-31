@@ -1,0 +1,13 @@
+<div id="order-comment">
+    <strong><?php echo __('Order Comment') ?></strong>
+    <span class="price"><?=$block->getOrderComment() ?></span>
+</div>
+<script type="text/javascript">
+    require(
+        ['jquery'],
+        function($) {
+            var element = $('#order-comment').detach();
+            $('.order-shipping-method').append(element);
+        }
+    );
+</script>
