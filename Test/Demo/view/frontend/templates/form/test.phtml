@@ -1,0 +1,54 @@
+<?php
+//echo "test "; die('test');
+$dropdown = $block->getCustomer()->getCustomAttribute('custom_dropdown');
+
+$emailCc = $block->getCustomer()->getCustomAttribute('phone_number');
+
+$landmark = $block->getCustomer()->getCustomAttribute('landmark');
+//echo $email->getValue();
+$customerEmailCC = $emailCc ? $emailCc->getValue() : null;
+
+$customerdropdowan = $dropdown ? $dropdown->getValue() : null;
+
+$customerlandmark = $landmark ? $landmark->getValue() : null;
+
+?>
+<fieldset class="fieldset create account" >
+    <legend class="legend">
+       
+    </legend>
+    <br>
+    <div class="field phone_number">
+        <label for="phone_number" class="label"><span><?php echo 'phone_number';?></span></label>
+        <div class="control">
+            <input id="phone_number" class="input-text" name="phone_number" value="<?php echo $customerEmailCC;?>" title='phone_number' type="text" autocomplete="off" />
+        </div>
+    </div>
+
+    <div class="field custom_dropdown">
+        <label for="custom_dropdown" class="label"><span><?php echo 'custom_dropdown';?></span></label>
+        <div class="control">
+            <select name="custom_dropdown" id="custom_dropdown">
+		    <option value='1' <?php if($customerdropdowan == '1') echo 'selected = "selected"' ?>>Google</option>
+		  	<option value='2' <?php if($customerdropdowan == '2') echo 'selected = "selected"' ?>>Friend</option>
+		    <option value='3' <?php if($customerdropdowan == '3') echo 'selected = "selected"' ?>>Email</option>
+		    <option value='4' <?php if($customerdropdowan == '4') echo 'selected = "selected"' ?>>Other</option>
+
+			</select>
+        </div>
+    </div>
+
+    <!-- <div class="field latitude">
+        <label for="latitude" class="label"><span><?php echo 'latitude';?></span></label>
+        <div class="control">
+            <input id="latitude" class="input-text" name="latitude" value="<?php //echo $customerlatitude;?>" title='latitude' type="text" autocomplete="off" />
+        </div>
+    </div> -->
+      <div class="field landmark">
+        <label for="landmark" class="label"><span><?php echo 'landmark';?></span></label>
+        <div class="control">
+            <input id="landmark" class="input-text" name="landmark" value="<?php echo $customerlandmark;?>" title='landmark' type="text" autocomplete="off" />
+        </div>
+    </div>
+    landmark
+</fieldset>

@@ -1,0 +1,54 @@
+<fieldset class="fieldset create account" data-hasrequired="<?php /* @escapeNotVerified */
+echo __('* Required Fields') ?>">
+    <legend class="legend"><span><?php /* @escapeNotVerified */
+            echo __('Additional Information') ?></span></legend>
+
+<p>
+<div class="field regulation required">
+    <label for="phone_number" class="label"><span><?php /* @escapeNotVerified */
+            echo __('phone_number') ?></span></label>
+    <div class="control">
+        <input type="text"  name="phone_number" id="phone_number" title="<?php /* @escapeNotVerified */
+        echo __('phone_number') ?>" class="input-text" data-validate="{required:true}">
+    </div>
+</div>
+<div class="field regulation required">
+    <label for="custom_dropdown" class="label"><span><?php /* @escapeNotVerified */
+            echo __('custom_dropdown') ?></span></label>
+    <div class="control">
+       
+    
+
+		<label for="custom_dropdown">How did you hear about us?:</label>
+
+		<select name="custom_dropdown" id="custom_dropdown" data-validate="{required:true}">
+			<option value="">Please Select</option>
+			<option value="1">Google</option>
+			<option value="2">Friend</option>
+			<option value="3">Email</option>
+			<option value="4">Other</option>
+		</select>
+		</div>
+
+
+	<!-- <div class="field regulation required">
+		<label for="latitude" class="label"><span><?php /* @escapeNotVerified */
+		echo __('latitude') ?></span></label>
+			<div class="control">
+			<input type="text"  name="latitude" id="latitude" title="<?php /* @escapeNotVerified */
+			echo __('latitude') ?>" class="input-text" data-validate="{required:true}">
+			</div>
+	</div> -->
+
+	<div class="field regulation required">
+		<label for="landmark" class="label"><span><?php /* @escapeNotVerified */
+		echo __('landmark') ?></span></label>
+			<div class="control">
+			<input type="text"  name="landmark" id="landmark" title="<?php /* @escapeNotVerified */
+			echo __('landmark') ?>" class="input-text" data-validate="{required:true}">
+			</div>
+	</div>
+
+	
+</div>
+</p></fieldset>
